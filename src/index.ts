@@ -1,5 +1,7 @@
 import reader from "./controllers/Reader";
 import writer from "./controllers/Writer";
+import PDFWriter from "./controllers/PDFWriter";
+
 import ReaderException from "./exceptions/ReaderException";
 import WriterException from "./exceptions/WriterException";
 import Processor from "./controllers/Processor";
@@ -28,6 +30,8 @@ async function main(){
     try{
         let writeResult = await writer.write("./html/" + Date.now() + ".html", htmlProcessado)
         if(!writeResult) throw new WriterException().objectError("Ocorreu um erro de escrita no arquivo!")
+        PDFWriter.writePdf("./pdf/" + Date.now() + ".pdf", htmlProcessado)
+        
     } catch(err){
         console.log(err)
     }
