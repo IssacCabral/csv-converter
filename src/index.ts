@@ -1,16 +1,33 @@
-import Reader from "./controllers/Reader";
+import reader from "./controllers/Reader";
+import writer from "./controllers/Writer";
 import ReaderException from "./exceptions/ReaderException";
-const leitor = new Reader()
+import WriterException from "./exceptions/WriterException";
+import Processor from "./controllers/Processor";
+import Table from "./controllers/Table";
+import HtmlParser from "./controllers/HTMLParser";
 
 const path = "src/csv/users.csv"
 
 async function main(){
+    var dados
+    var htmlProcessado: any
+    var dadosProcessados: any
+
     try{
-        let dados = await leitor.read(path)
+        dados = await reader.read(path)
         if(dados === undefined){
             throw new ReaderException().objectError("Ocorreu um erro na leitura do arquivo")
         }
-        console.log(dados)
+        dadosProcessados = Processor.process(dados)
+        const table = new Table(dadosProcessados)
+        htmlProcessado = await HtmlParser.parse(table)
+    } catch(err){
+        console.log(err)
+    }
+
+    try{
+        let writeResult = await writer.write("./html/" + Date.now() + ".html", htmlProcessado)
+        if(!writeResult) throw new WriterException().objectError("Ocorreu um erro de escrita no arquivo!")
     } catch(err){
         console.log(err)
     }

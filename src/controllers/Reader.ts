@@ -20,7 +20,8 @@ import util from 'util'
 // }
 
 class Reader{
-    reader: any
+    private reader: any
+    
     constructor(){
         this.reader = util.promisify(readFile)
     }
@@ -34,4 +35,4 @@ class Reader{
     }
 }
 
-export default Reader
+export default new Reader()
