@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Csv-Converter</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/syle.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light" style="background-color: rgb(52, 61, 102);"> 
+            <a class="navbar-brand" href="/">
+              <img src="/image/Logo.png" alt="">
+            </a>
+        </nav>
+
+        <div class="header">
+            <h2> Conversor de CSV para PDF e HTML </h2>
+        </div>
+
+        <div class="context">
+            <form method='POST' action="/mostradados">
+                <img class="" src="/image/files.svg" width="100px" height="100px" />
+                <h4 class="">Escolha a Opção desejada:</h4>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="option" value="html" required />
+                        <span>HTML</span>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="option" value="pdf" required />
+                        <span>PDF</span>
+                    </div>
+                </div>
+                <label for="file" class="task-container">
+                    <span class="text">Selecionar arquivo</span>
+                </label>
+                <input type="file" accept=".csv" name="file" id="file" required>
+
+                <button class="add-button" type="submit">Converter</button>
+            </form>
+        </div>
+        
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</html>

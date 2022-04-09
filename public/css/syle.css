@@ -1,0 +1,85 @@
+body {
+    background-color: #222;
+}
+
+.context {
+    margin: 30px auto;
+    max-width: 500px;
+    min-height: 300px;
+    border: 2px solid chartreuse;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+    margin-top: 25px;
+}
+
+.task-container {
+    background-color: #444;
+    margin: 8px 0;
+    padding: 15px 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    color: #eee;
+    align-items: center;
+}
+
+.task-title {
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: chartreuse;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.input-label {
+    margin: 0 0 3em 0;
+    padding: 0.2rem;
+    width: 100%;
+
+    display: flex;
+    font-size: 1em;
+
+    border: 2px solid #ebebeb;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.plus-icon {
+    background-color: var(--text-color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+
+    border-radius: 0.5em;
+}
+
+
+
+label{
+    padding: 20px 10px;
+    width: 200px;
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+}
