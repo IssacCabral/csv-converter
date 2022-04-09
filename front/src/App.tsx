@@ -1,11 +1,17 @@
 import './App.css'
+import Header from './components/Header/Header'
+import Context from './components/Context/Context'
 
 function App() {
 
   return (
-    <div className="App">
 
+    <div className="container">
+      <Header />
+      <Context/>
     </div>
+
+
   )
 }
 
